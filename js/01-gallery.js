@@ -36,14 +36,15 @@ function openModal(event) {
 
 instance.show()
 
-    window.addEventListener('keydown', closeModalOnEsc)
-}
+    window.addEventListener('keydown', closeModalOnEsc);
 
-function closeModalOnEsc(event) {
+    function closeModalOnEsc(event) {
     if (event.code === 'Escape') {
         instance.close();
         window.removeEventListener('keydown', closeModalOnEsc)
     }
 }
+}
+
 
 galleryList.addEventListener('click', openModal);
